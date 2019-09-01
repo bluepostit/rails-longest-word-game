@@ -1,15 +1,19 @@
 <div class="container m-4">
   <h1>Score</h1>
   <% if @error == :word_not_from_grid %>
-    <p>Sorry, but <strong><%= @word.upcase %></strong>
-       can't be built out of <%= @letters.join(', ').upcase %>.</p>
-  <% elsif @error == :word_not_valid %>
-    <p>Sorry, but <strong><%= @word.upcase %></strong>
-      doesn't seem to be an English word.</p>
-  <% else %>
-    <p><strong>Congratulations!</strong> <%= @word.upcase %>
-    is a valid English word!</p>
-  <% end %>
+  <p>Sorry, but <strong><%= @word.upcase %></strong>
+   can't be built out of <%= @letters.join(', ').upcase %>.</p>
+   <% elsif @error == :word_not_valid %>
+   <p>Sorry, but <strong><%= @word.upcase %></strong>
+   doesn't seem to be an English word.</p>
+   <% else %>
+   <p><strong>Congratulations!</strong> <%= @word.upcase %>
+   is a valid English word!</p>
+   <% end %>
+   <div class="scores">
+    <p>Your score for this round: <span class="score score-current"><%= @current_score %></span></p>
+    <p>Your total score: <span class="score score-total"><%= @total_score %></span></p>
+  </div>
 
   <%= link_to 'Play again', new_path %>
 

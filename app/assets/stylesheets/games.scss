@@ -5,6 +5,12 @@
 $letter-blue: #3398dc;
 $letter-border: #2980b9;
 
+h1 {
+  font-size: 3em;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
 .letters {
   display: flex;
   width: 100%;
@@ -21,5 +27,14 @@ $letter-border: #2980b9;
     text-align: center;
     border: 1px solid $letter-border;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  }
+}
+
+.scores {
+  margin: 0.8em 0;
+  font-size: 1.8em;
+
+  p {
+    margin: 0;
   }
 }
