@@ -8,7 +8,6 @@ class GamesController < ApplicationController
   def new
     set_cache_headers
     @letters = random_letters(10)
-    puts @letters
   end
 
   def score
